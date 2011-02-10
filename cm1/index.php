@@ -325,7 +325,7 @@ class tx_rkexportdoc_cm1 extends t3lib_SCbase {
    	$website = strtr($website, $table);
    	$website = strtolower($website);
    
-   	$filename = 'TYPO3GENERATED-'.$website.'-'.$title;
+   	$filename = 'TYPO3GENERATED-'.$website.'-'.$title.'.doc';
     return $filename;
 
 	}
