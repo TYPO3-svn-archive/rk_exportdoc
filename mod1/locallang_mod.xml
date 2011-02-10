@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for module &quot;web_txrkexportdocM1&quot; - header, description</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="mlang_tabs_tab">Export Document</label>
+			<label index="mlang_labels_tabdescr">An extension that exports a page (and subpages) to a word document.</label>
+			<label index="mlang_labels_tablabel">Export pages to document</label>
+		</languageKey>
+		<languageKey index="nl" type="array">
+			<label index="mlang_tabs_tab">Export Dossier</label>
+			<label index="mlang_labels_tabdescr">Een extensie die het mogelijk maakt om pagina's te exporteren naar word.</label>
+			<label index="mlang_labels_tablabel">Exporteer pagina's naar word</label>
+		</languageKey>
+	</data>
+</T3locallang>
