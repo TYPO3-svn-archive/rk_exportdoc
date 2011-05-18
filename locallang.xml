@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for extension 'rk_exportdoc'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="cm1_title">Export (sub)pages to document</label>
+			<label index="modfunc1_title">Export (sub)pages to document</label>
+		</languageKey>
+		<languageKey index="nl" type="array">
+			<label index="cm1_title">Exporteer (sub)pagina's naar word</label>
+			<label index="modfunc1_title">Exporteer (sub)pagina's naar word</label>
+			
+		</languageKey>
+	</data>
+</T3locallang>
