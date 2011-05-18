@@ -52,11 +52,18 @@ class tx_rkexportdoc_cm1 {
 			
 				// Repeat this (below) for as many items you want to add!
 				// Remember to add entries in the localconf.php file for additional titles.
-			$url = t3lib_extMgm::extRelPath('rk_exportdoc').'cm1/index.php?id='.$uid;
+			//$url = t3lib_extMgm::extRelPath('rk_exportdoc').'cm1/index.php?id='.$uid;
+			
+			// link to wizard > export to page..
+			$url = 'index.php?id='.$uid.'&SET[wiz]=tx_rkexportdoc_modfunc1';
+			
+			
+			
+			
 			$localItems[] = $backRef->linkItem(
 				$GLOBALS['LANG']->getLLL("cm1_title",$LL),
 				$backRef->excludeIcon('<img src="'.t3lib_extMgm::extRelPath("rk_exportdoc").'cm1/cm_icon.gif" width="15" height="12" border="0" align="top" />'),
-				$backRef->urlRefForCM($url),
+				$this->urlRefForCM($url),
 				1	// Disables the item in the top-bar. Set this to zero if you with the item to appear in the top bar!
 			);
 
@@ -86,6 +93,19 @@ class tx_rkexportdoc_cm1 {
 			}
 		}
 		return $menuItems;
+	}
+	
+	function urlRefForCM($url,$retUrl='',$hideCM=1,$overrideLoc='') {
+		$loc = 'top.content.list_frame';
+		/* old function
+		$editOnClick= ($overrideLoc ? 'var docRef='.$overrideLoc : 'var docRef=(top.content.list_frame)?top.content.list_frame:'.$loc).'; docRef.location.href=top.TS.PATH_typo3+\''.$url.'\''.
+			($retUrl ? "+'&" . $retUrl . "='+top.rawurlencode(" . $this->frameLocation('docRef.document') . ')' :'') . ';' .
+			($hideCM ? 'return hideCM();' : '');
+		*/
+		$editOnClick = "top.goToModule('web_func');".
+			'jumpToUrl("'.$url.'", this);';
+			($hideCM ? 'return hideCM();' : '');
+		return $editOnClick;
 	}
 	
 	/**
